@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://entities" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://entities" xmlns:intf="http://entities" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://entities" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="setHotelAvailability">
+    <complexType>
+     <sequence>
+      <element name="hotelAvailability" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setHotelAvailabilityResponse">
+    <complexType/>
+   </element>
+   <element name="getHotelAvailability">
+    <complexType/>
+   </element>
+   <element name="getHotelAvailabilityResponse">
+    <complexType>
+     <sequence>
+      <element name="getHotelAvailabilityReturn" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getHotelName">
+    <complexType/>
+   </element>
+   <element name="getHotelNameResponse">
+    <complexType>
+     <sequence>
+      <element name="getHotelNameReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setHotelId">
+    <complexType>
+     <sequence>
+      <element name="hotelId" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setHotelIdResponse">
+    <complexType/>
+   </element>
+   <element name="getCdPaciente">
+    <complexType/>
+   </element>
+   <element name="getCdPacienteResponse">
+    <complexType>
+     <sequence>
+      <element name="getCdPacienteReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setHotelName">
+    <complexType>
+     <sequence>
+      <element name="hotelName" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setHotelNameResponse">
+    <complexType/>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="setHotelAvailabilityResponse">
+
+      <wsdl:part element="impl:setHotelAvailabilityResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCdPacienteResponse">
+
+      <wsdl:part element="impl:getCdPacienteResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setHotelAvailabilityRequest">
+
+      <wsdl:part element="impl:setHotelAvailability" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCdPacienteRequest">
+
+      <wsdl:part element="impl:getCdPaciente" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getHotelAvailabilityRequest">
+
+      <wsdl:part element="impl:getHotelAvailability" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setHotelIdResponse">
+
+      <wsdl:part element="impl:setHotelIdResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getHotelNameResponse">
+
+      <wsdl:part element="impl:getHotelNameResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setHotelIdRequest">
+
+      <wsdl:part element="impl:setHotelId" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getHotelAvailabilityResponse">
+
+      <wsdl:part element="impl:getHotelAvailabilityResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setHotelNameResponse">
+
+      <wsdl:part element="impl:setHotelNameResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getHotelNameRequest">
+
+      <wsdl:part element="impl:getHotelName" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setHotelNameRequest">
+
+      <wsdl:part element="impl:setHotelName" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="Hotel">
+
+      <wsdl:operation name="setHotelAvailability">
+
+         <wsdl:input message="impl:setHotelAvailabilityRequest" name="setHotelAvailabilityRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setHotelAvailabilityResponse" name="setHotelAvailabilityResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getHotelAvailability">
+
+         <wsdl:input message="impl:getHotelAvailabilityRequest" name="getHotelAvailabilityRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getHotelAvailabilityResponse" name="getHotelAvailabilityResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getHotelName">
+
+         <wsdl:input message="impl:getHotelNameRequest" name="getHotelNameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getHotelNameResponse" name="getHotelNameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setHotelId">
+
+         <wsdl:input message="impl:setHotelIdRequest" name="setHotelIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setHotelIdResponse" name="setHotelIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCdPaciente">
+
+         <wsdl:input message="impl:getCdPacienteRequest" name="getCdPacienteRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getCdPacienteResponse" name="getCdPacienteResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setHotelName">
+
+         <wsdl:input message="impl:setHotelNameRequest" name="setHotelNameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setHotelNameResponse" name="setHotelNameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="HotelSoapBinding" type="impl:Hotel">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="setHotelAvailability">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setHotelAvailabilityRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setHotelAvailabilityResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getHotelAvailability">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getHotelAvailabilityRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getHotelAvailabilityResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getHotelName">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getHotelNameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getHotelNameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setHotelId">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setHotelIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setHotelIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCdPaciente">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getCdPacienteRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getCdPacienteResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setHotelName">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setHotelNameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setHotelNameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="HotelService">
+
+      <wsdl:port binding="impl:HotelSoapBinding" name="Hotel">
+
+         <wsdlsoap:address location="http://localhost:8080/projeto-web-service01/services/Hotel"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

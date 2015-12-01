@@ -1,0 +1,41 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from HotelService WSDL service -->
+
+  <service name="Hotel" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://entities"/>
+      <parameter name="wsdlServiceElement" value="HotelService"/>
+      <parameter name="schemaQualified" value="http://entities"/>
+      <parameter name="wsdlServicePort" value="Hotel"/>
+      <parameter name="className" value="entities.HotelSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="Hotel"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="setHotelAvailability" qname="operNS:setHotelAvailability" xmlns:operNS="http://entities" soapAction="" >
+        <parameter qname="pns:hotelAvailability" xmlns:pns="http://entities" type="tns:boolean" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getHotelAvailability" qname="operNS:getHotelAvailability" xmlns:operNS="http://entities" returnQName="retNS:getHotelAvailabilityReturn" xmlns:retNS="http://entities" returnType="rtns:boolean" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="getHotelName" qname="operNS:getHotelName" xmlns:operNS="http://entities" returnQName="retNS:getHotelNameReturn" xmlns:retNS="http://entities" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="setHotelId" qname="operNS:setHotelId" xmlns:operNS="http://entities" soapAction="" >
+        <parameter qname="pns:hotelId" xmlns:pns="http://entities" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getCdPaciente" qname="operNS:getCdPaciente" xmlns:operNS="http://entities" returnQName="retNS:getCdPacienteReturn" xmlns:retNS="http://entities" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="setHotelName" qname="operNS:setHotelName" xmlns:operNS="http://entities" soapAction="" >
+        <parameter qname="pns:hotelName" xmlns:pns="http://entities" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="setHotelAvailability getHotelName getCdPaciente getHotelAvailability setHotelName setHotelId"/>
+
+  </service>
+</deployment>
